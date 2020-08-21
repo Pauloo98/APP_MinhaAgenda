@@ -14,8 +14,7 @@ import br.com.paulo.modelo.Aluno;
 
 public class CadastrodecontatoActivity extends AppCompatActivity {
 
-    Intent dados = getIntent();
-    Aluno aluno = (Aluno) dados.getSerializableExtra("aluno");
+
 
 
     @Override
@@ -32,8 +31,8 @@ public class CadastrodecontatoActivity extends AppCompatActivity {
         final EditText telefone = findViewById(R.id.telefone);
         Button botaoSalvar = findViewById(R.id.botao_de_cadastro);
 
-//        Intent dados = getIntent();
-//        Aluno aluno = (Aluno) dados.getSerializableExtra("aluno");
+        Intent dados = getIntent();
+        Aluno aluno = (Aluno) dados.getSerializableExtra("aluno");
         nome.setText(aluno.getNomeDoContato());
         email.setText(aluno.getEmailDoContato());
         telefone.setText(aluno.getTelefoneDoContato());
