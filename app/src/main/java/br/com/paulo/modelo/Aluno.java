@@ -1,9 +1,12 @@
 package br.com.paulo.modelo;
 
-public class Aluno {
-    private final String nomeDoContato;
-    private final String emailDoContato;
-    private final String telefoneDoContato;
+import java.io.Serializable;
+
+public class Aluno implements Serializable {
+
+    protected final String nomeDoContato;
+    protected final String emailDoContato;
+    protected final String telefoneDoContato;
 
     public Aluno(String nomeDoContato, String emailDoContato, String telefoneDoContato) {
         this.nomeDoContato = nomeDoContato;
@@ -16,15 +19,17 @@ public class Aluno {
         return nomeDoContato;
     }
 
-    //    public String getNomeDoContato() {
-//        return nomeDoContato;
-//    }
-//
-//    public String getEmailDoContato() {
-//        return emailDoContato;
-//    }
-//
-//    public String getTelefoneDoContato() {
-//        return telefoneDoContato;
+    public String getNomeDoContato() {
+        return nomeDoContato;
     }
+
+    public String getEmailDoContato() {
+        return emailDoContato;
+    }
+
+    public String getTelefoneDoContato() {
+        return telefoneDoContato;
+    }
+
+}
 
